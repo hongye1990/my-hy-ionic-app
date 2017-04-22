@@ -1,0 +1,24 @@
+<ion-card>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="{{member.capitalPhoto ?member.capitalPhoto :'assets/img/avatar.jpg'}}">
+    </ion-avatar>
+    <ion-label item-right color="black">省份: {{member.name}} </ion-label>
+    <ion-label item-right color="secondary">去过: {{member.visited ?member.visited :'NA'}} </ion-label>
+  </ion-item>
+
+   <ion-row>
+      <ion-col col-3>
+      <button ion-button icon-left clear (click)="chooseMember()">
+        <ion-icon name="create"></ion-icon>
+        <div>编辑</div>
+      </button>
+    </ion-col>
+    <ion-col col-3>
+      <button color="danger" ion-button icon-left clear (click)="delete()">
+        <ion-icon name="close"></ion-icon>
+        <div>删除</div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
